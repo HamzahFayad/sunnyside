@@ -1,0 +1,146 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  padding: 0;
+  margin: 2% 0;
+}
+
+h2 {
+  font-size: 34px;
+  color: #23303e;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #5a636c;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 2%;
+  z-index: 99;
+}
+nav li {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 25px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+nav li:hover {
+  color: #19536b;
+  background: #fff;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin: 2%;
+  z-index: 99;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.main__bgImage {
+  width: 100%;
+  height: 100%;
+}
+.main h2 {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  font-size: 3rem;
+  top: 200px;
+}
+
+.middleSct {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+}
+.middleSct div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.middleSct h2,
+.middleSct p,
+.middleSct a {
+  width: 60%;
+}
+.middleSct .middleSct__3-1,
+.middleSct .middleSct__3-2 {
+  position: relative;
+}
+.middleSct .x {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  width: 90%;
+}
+.middleSct .x h3 {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 375px) {
+  body,
+html {
+    overflow-x: hidden;
+  }
+
+  .middleSct {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .middleSct div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .middleSct h2,
+.middleSct p,
+.middleSct a {
+    text-align: center;
+    width: 95%;
+    padding: 20px 4px;
+  }
+  .middleSct img {
+    width: 100vw;
+  }
+  .middleSct .middleSct__2-1 {
+    order: 2;
+  }
+  .middleSct .middleSct__3-1,
+.middleSct .middleSct__3-2 {
+    order: 3;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
