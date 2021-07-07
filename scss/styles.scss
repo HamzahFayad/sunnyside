@@ -4,13 +4,36 @@
 h2 {
   font-size: 34px;
   color: hsl(212, 27%, 19%);
+  z-index: 99;
 }
 p {
   font-size: 18px;
   line-height: 26px;
   color: hsl(213, 9%, 39%);
+  z-index: 99;
 }
-
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 900;
+  position: relative;
+  z-index: 99;
+  color: $text-color;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  &:hover::after {
+    height: 10px;
+    width: 110px;
+    border-radius: 20px;
+    background: hsl(51, 100%, 49%);
+  }
+}
 nav {
   position: fixed;
   top: 0;
@@ -95,10 +118,49 @@ h1 {
   }
 }
 
+.clients {
+  &__comments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    div {
+      max-width: 350px;
+      position: relative;
+      z-index: 99;
+    }
+    h4,
+    p {
+      text-align: center;
+    }
+    img {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+.images {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  div {
+    padding: 100px 0;
+    width: 400px;
+    height: 200px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   body,
   html {
     overflow-x: hidden;
+  }
+  nav {
+    display: none;
   }
   .middleSct {
     display: flex;
@@ -126,5 +188,17 @@ h1 {
     .middleSct__3-2 {
       order: 3;
     }
+  }
+
+  .clients {
+    &__comments {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 10px;
+    }
+  }
+  .images {
+    display: flex;
+    flex-flow: row wrap;
   }
 }
