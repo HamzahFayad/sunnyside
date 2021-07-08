@@ -143,14 +143,48 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  width: 100vw;
+  height: 100%;
+  position: relative;
   div {
-    padding: 100px 0;
     width: 400px;
     height: 200px;
   }
   img {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.footer {
+  background: lighten(hsl(168, 34%, 41%), 22%);
+  height: 300px;
+  width: 100vw;
+  position: relative;
+  h2 {
+    text-align: center;
+    padding-top: 4%;
+  }
+  .links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 80px;
+    p {
+      color: $text-color;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .socials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 1% 0;
   }
 }
 
@@ -181,12 +215,21 @@ h1 {
     img {
       width: 100vw;
     }
+    .middleSct__1-1 {
+      order: 1;
+    }
     .middleSct__2-1 {
       order: 2;
     }
+    .middleSct__2-2 {
+      order: 3;
+    }
+    .middleSct__2-3 {
+      order: 4;
+    }
     .middleSct__3-1,
     .middleSct__3-2 {
-      order: 3;
+      order: 6;
     }
   }
 
@@ -200,5 +243,36 @@ h1 {
   .images {
     display: flex;
     flex-flow: row wrap;
+    div {
+      height: 400px;
+    }
+  }
+  .footer {
+    h2 {
+      padding-top: 15%;
+    }
+    .links {
+      gap: 50px;
+      padding-top: 5%;
+
+      p {
+        color: $text-color;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .socials {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 1% 0;
+      img {
+        padding-top: 15%;
+      }
+    }
   }
 }
