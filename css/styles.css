@@ -1,8 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h2 {
+  font-family: Fraunces;
+}
+
+h1,
+p,
+li {
+  font-family: Barlow;
 }
 
 h1,
@@ -21,9 +33,9 @@ h2 {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
-  color: #5a636c;
+  color: #818498;
   z-index: 99;
 }
 
@@ -55,15 +67,17 @@ nav {
   top: 0;
   right: 0;
   margin: 2%;
-  z-index: 99;
+  z-index: 101;
 }
 nav li {
   text-decoration: none;
   display: inline-block;
   padding: 10px 25px;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
+  background: rgba(25, 83, 107, 0.712);
+  border-radius: 20px;
 }
 nav li:hover {
   color: #19536b;
@@ -76,11 +90,24 @@ h1 {
   text-align: center;
   position: absolute;
   position: fixed;
+  font-weight: 900;
   top: 0;
   left: 0;
   padding: 10px;
   margin: 2%;
-  z-index: 99;
+  z-index: 101;
+}
+
+svg {
+  text-align: center;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  margin: 5%;
+  z-index: 101;
+  display: none;
 }
 
 .main {
@@ -133,6 +160,9 @@ h1 {
   font-size: 24px;
 }
 
+.clients {
+  margin-bottom: 6%;
+}
 .clients__comments {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -146,6 +176,9 @@ h1 {
 .clients__comments h4,
 .clients__comments p {
   text-align: center;
+}
+.clients__comments h4 {
+  color: #23303e;
 }
 .clients__comments img {
   border-radius: 50%;
@@ -208,8 +241,48 @@ html {
     overflow-x: hidden;
   }
 
+  .open {
+    display: block;
+  }
+
   nav {
     display: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(100px);
+    text-align: center;
+    height: 27%;
+    z-index: 101;
+    background: #fff;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+  }
+  nav li {
+    transform: translateX(-18px);
+    color: #19536b;
+    background: none;
+  }
+  nav li:hover {
+    color: #19536b;
+    background: #fad400;
+    border-radius: 20px;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 3%;
+  }
+
+  svg {
+    display: block;
   }
 
   .middleSct {
@@ -249,10 +322,16 @@ html {
     order: 6;
   }
 
+  .clients {
+    margin-bottom: 12%;
+  }
   .clients__comments {
     display: flex;
     flex-flow: column wrap;
     gap: 10px;
+  }
+  .clients img {
+    max-width: 100px;
   }
 
   .images {
